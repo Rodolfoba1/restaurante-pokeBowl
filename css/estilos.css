@@ -1,27 +1,29 @@
-/*VARIABLES*/
+/* VARIABLES */
 :root{
-    --color-primario: #FC8038;
+    --color-primario: #FCB03B;
     --color-secundario: #E92F3D;
-    --color-backround-sombra: #E92F3D30;
-    --color-backround: #EFF6F5;
+    --color-backgroud-sombra: #E92F3D30;
+    --color-background: #EFF6F5;
     --color-texto: #A1A5A6;
-    --text-default: 'Open Sans';
+    --text-defaul: 'Open Sans';
 }
 
-/*Generales*/
+
+/* GENERALES */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--text-default);
+    font-family: var(--text-defaul);
 }
+
 
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background: var(--color-backround);
+    background: var(--color-background);
 }
 
 .titulos{
@@ -65,7 +67,9 @@ body{
 }
 
 
-/*MENU PRINCIPAL*/
+
+
+/* MENU PRINCIPAL */
 .menu-principal{
     width: 100%;
     display: flex;
@@ -73,12 +77,17 @@ body{
     align-items: center;
     height: 75px;
     padding: 0 30px;
-    margin-top: 80px;
-    background: var(--color-backround);
+    margin-top: 10px;
+    background: var(--color-background);
     z-index: 1;
 }
 
 .logo img{
+    width: 130px;
+    cursor: pointer;
+}
+
+.menu-bar{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -134,9 +143,12 @@ body{
     color: var(--color-secundario);
 }
 
-/* SLIDER DE PRODUCTOS*/
+
+
+
+/* SLIDER DE PRODUCTOS */
 #menu-productos .contenedor-principal{
-    display:flex;
+    display: flex;
     align-items: center;
     position: relative;
     z-index: 0;
@@ -160,13 +172,15 @@ body{
 
 .contenedor-principal #btn-izquierda:hover,
 .contenedor-principal #btn-derecha:hover{
-    background: var(--color-backround-sombra);
+    background: var(--color-backgroud-sombra);
     transform: translateY(5px);
 }
+
 
 .contenedor-principal #btn-izquierda{
     left: 0;
 }
+
 
 .contenedor-principal #btn-derecha{
     right: 0;
@@ -176,9 +190,10 @@ body{
     display: flex;
     overflow: hidden;
     height: calc(100vh - 80px);
+    scroll-behavior: smooth;
 }
 
-.contenedor-productos{
+.container-productos{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,11 +223,11 @@ body{
     text-align: justify;
 }
 
+
 .imagen-productos{
     width: 50%;
     display: flex;
     justify-content: center;
-
 }
 
 .imagen-productos img{
@@ -225,14 +240,16 @@ body{
     transform: scale(1.15);
 }
 
-/* SECCION SERVICIOS*/
+
+
+/* SECCION SERVICIOS */
 #servicios{
     height: 100vh;
-    background-color: #FFF;
+    background: #FFF;
     padding: 40px;
 }
 
-.servicios-titulos{
+.servicios-tiulos{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,8 +262,8 @@ body{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-gap: 30px;
-    grid-template-areas:    "ingredientes   imagen  rapidez"
-                            "calidad        imagen  delivery";
+    grid-template-areas:     "ingredientes  imagen    rapidez"
+                             "calidad       imagen    delivery";
 }
 
 .calidad{
@@ -293,6 +310,7 @@ body{
     padding: 20px;
     border: 5px double #dedede;
     border-radius: 50%;
+    text-align: center;
     transition: all 0.5s;
 }
 
@@ -301,18 +319,18 @@ body{
     color: #FFF;
 }
 
-.ingredientes span,
+.ingredientes span, 
 .calidad span{
     color: var(--color-primario);
 }
 
-.ingredientes span:hover,
+.ingredientes span:hover, 
 .calidad span:hover{
-    background-color: var(--color-primario);
+    background: var(--color-primario);
     color: #FFF;
 }
 
-.items .titulos-item{
+.items .titulo-item{
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 700;
@@ -323,11 +341,13 @@ body{
     font-size: 14px;
     color: var(--color-texto);
     text-align: center;
-    font-size: italic;
+    font-style: italic;
     padding: 0 20px;
 }
 
-/*SECCION DE EQUIPO*/
+
+
+/* SECCION DE EQUIPO */
 #equipo{
     height: 100vh;
     display: flex;
@@ -365,6 +385,7 @@ body{
     transition: all 0.1s;
 }
 
+
 .persona:hover .persona-info{
     opacity: 1;
     bottom: 60px;
@@ -375,9 +396,9 @@ body{
     font-size: 30px;
     color: #000;
     font-weight: 600;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
+
 
 .persona-info p{
     color: var(--color-secundario);
@@ -386,7 +407,7 @@ body{
     font-style: italic;
     margin-top: 8px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.5);
+    text-shadow: 2px 2px 3px rgba(255,0,0,0.5);
 }
 
 .social-media a{
@@ -403,11 +424,13 @@ body{
     transition: all 0.5s;
 }
 
+
 .social-media a:hover{
     color: var(--color-secundario);
     background: transparent;
     transform: scale(2);
 }
+
 
 /* SECCION DE INGREDIENTES */
 #ingredientes{
@@ -438,7 +461,7 @@ body{
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.5);
     transition: all 0.3s;
 }
 
@@ -450,15 +473,18 @@ body{
 }
 
 .info-ingre:hover{
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0,0,0,0.25);
 }
 
 .info-ingre:hover p{
     transform: translateY(10px);
 }
 
-/* SECCION CONTACTO */
 
+
+
+
+/* SECCION CONTACTO */
 #contacto{
     height: 100vh;
     padding: 60px;
@@ -470,7 +496,7 @@ body{
     margin: 50px auto;
 }
 
-.two-fields{
+.two-fiels{
     display: flex;
     justify-content: space-between;
 }
@@ -490,7 +516,7 @@ body{
 .textarea{
     width: 100%;
     height: 150px;
-    resize: none;
+    resize:none;
 }
 
 .input-text, .input-email{
@@ -502,7 +528,7 @@ body{
     width: 48%;
 }
 
-.inputConIcon{
+.inputConIcon i{
     position: absolute;
     left: 0;
     padding: 14px 15px;
@@ -510,6 +536,7 @@ body{
     color: #fff;
     transition: all 0.5s;
 }
+
 
 .textareaIcon{
     width: 100%;
@@ -530,6 +557,7 @@ body{
     border: 1px solid var(--color-primario);
 }
 
+
 .inputConIcon input:focus + i{
     background: var(--color-primario);
 }
@@ -538,7 +566,8 @@ body{
     color: var(--color-primario);
 }
 
-.fields-btn{
+
+.fiels-btn{
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -551,6 +580,9 @@ body{
 .btn-input:hover{
     padding: 15px 65px;
 }
+
+
+
 
 /* ALERTAS */
 .alertas{
@@ -567,19 +599,19 @@ body{
     transition: all 0.5s;
 }
 
-.alert .show{
+.alert.show{
     transform: translateY(50%);
 }
 
-.alert .hide{
-    transform: translateY(-100%);
+.alert.hide{
+    transform: translateY(-100%); 
 }
 
 .alert .icono-alert{
     position: absolute;
     left: 20px;
     top: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     font-size: 30px;
 }
 
@@ -587,6 +619,7 @@ body{
     padding: 0 20px;
     font-size: 18px;
 }
+
 
 #alertError{
     background: #f8d7da;
@@ -598,8 +631,10 @@ body{
 }
 
 #alertError .msg{
-    color: #721d24;
+    color: #721c24;
 }
+
+
 
 #alertSuccess{
     background: #d4edda;
@@ -614,7 +649,8 @@ body{
     color: #155724;
 }
 
-/*FOOTER*/
+
+/* FOOTER */
 footer{
     display: flex;
     margin-top: -100px;
@@ -664,7 +700,9 @@ footer{
     transform: translateY(-20px);
 }
 
-/* BOTON DE IR ARRIBA*/
+
+
+/* BOTON DE IR ARRIBA */
 #btn-top{
     width: 50px;
     height: 50px;
@@ -692,7 +730,7 @@ footer{
     width: 100%;
     text-align: center;
     line-height: 50px;
-    transform: all 0.5s;
+    transition: all 0.5s;
 }
 
 #btn-top:hover{
@@ -703,144 +741,159 @@ footer{
     transform: translateY(-3px);
 }
 
+
+
+
+
+
+
 /* MEDIA QUERYS */
 @media screen and (max-width: 850px){
-    /*SLIDER PRODUCTOS*/
+    /* SLIDER PRODUCTOS */
     .container-productos{
-        flex-direction: column;
+         flex-direction: column;
     }
 
     .descripcion-productos{
-        width: 70%;
-        order: 1;   
+         width: 70%;
+         order: 1;
     }
 
     .descripcion-productos .btn{
-        padding: 10px 20px;
+         padding: 10px 20px;
     }
 
     .descripcion-productos .btn:hover{
-        padding: 10px 30px;
+         padding: 10px 30px;
     }
 
-    /*
-    .descripcion-productos{
-        font-size: 2.2vw;  /*vw signficia que se ajusta el tamanio de la letra de acuerdo al tamanio de la pantalla
-    }*/
 
-    /*SECCION SERVICIOS*/
+    /* SECCION SERVICIOS */
     .servicios-container{
-        margin: 0;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:    "ingredientes   rapidez"
-                                "calidad        delivery";
+         margin-top: 50px;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-areas:     "ingredientes  rapidez"
+                                  "calidad       delivery";
     }
-    
+
+    .imagen-central{
+         display: none;
+    }
 }
 
+
+
+
+
 @media screen and (max-width: 650px){
+    /* MENU PRINCIPAL */
     .menu-principal{
-        position: fixed;
-        top: 0;
-        margin-top: 0;        
+         position: fixed;
+         top: 0;
+         margin-top: 0;
     }
 
     .menu-principal i{
-        display: block;
+         display: block;
     }
 
     .menu-bar{
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 1000;
-        background: #333;
-        transition: all 1s;
-        transform: translateX(100%);
+         justify-content: space-around;
+         align-items: center;
+         flex-direction: column;
+         width: 100%;
+         height: 100vh;
+         position: fixed;
+         right: 0;
+         top: 0;
+         z-index: 1000;
+         background: #333;
+         transition: all 1s;
+         transform: translateX(100%);
     }
 
     .menu-bar.active{
-        transform: translateX(0%);
+         transform: translateX(0%);
     }
 
     .menu-bar i{
-        position: absolute;
-        right: 50px;
-        top: 50px;
+         position: absolute;
+         right: 50px;
+         top: 50px;
     }
+
     .menu-bar .enlaces ul li{
-        display: block;
-        padding: 20px 10px;
-        text-align: center;
+         display: block;
+         padding: 20px 10px;
+         text-align: center;
     }
 
     .menu-bar .enlaces ul li a,
     .menu-bar .sociales a{
-        font-size: 20px;
+         font-size: 20px;
     }
 
-    /*SLIDER PRODUCTOS*/
+
+    /* SLIDER PRODUCTOS */
     .slider{
-        height: calc(100vh - 0px);
+         height: calc(100vh - 0px);
     }
-
     .imagen-productos{
-        width: 85%;
+         width: 65%;
     }
 
     .descripcion-productos h1{
-        font-size: 7vw;
+         font-size: 7vw;
     }
 
     .descripcion-productos h2{
-        font-size: 3vw;
+         font-size: 3vw;
     }
+
 
     /* INGREDIENTES */
     .info-ingre .txt-ingre{
-        display: none;
-    }    
+         display: none;
+    }
+
 
     /* CONTACTOS */
     #formulario{
-        width: 100%;
+         width: 100%;
     }
 
-    .two-fields{
-        flex-direction: column;
+    .two-fiels{
+         flex-direction: column;
     }
 
     .inputConIcon{
-        width: 100%;
+         width: 100%;
     }
 
-    /* ALERTAS*/
+
+    /* ALERTAS */
     .alert{
-        width: 100%;
-    }
-    
-    .alert.show{
-        transform: translateY(150%);
+         width: 100%;
     }
 
-    /* FOOTER*/
+    .alert.show{
+         transform: translateY(150%);
+    }
+
+
+    /* FOOTER */
     footer{
-        flex-wrap: wrap;
-        margin-top: 0px;
+         flex-wrap: wrap;
+         margin-top: 0px;
     }
 
     .sociales-metodo{
-        width: 50%;
+         width: 50%;
     }
 
-    /* BOTON DE IR ARRIBA*/
+
+    /* BOTON DE IR ARRIBA */
     #btn-top{
-        display: none;
+         display: none;
     }
 }
-
